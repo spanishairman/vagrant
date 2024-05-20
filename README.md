@@ -156,10 +156,12 @@ drwxr-xr-x 2 root root 4096 апр 16 12:11 ubuntu
 drwxr-xr-x 4 root root 4096 апр 16 12:11 windows
 
 Создадим новый файл Vagrantfile, указав имя файла с образом vagrant: 
+
   vagrant init /home/max/vagrant/images/debian12
 
 После этого добавим оперативной памяти и виртуальных процессоров для наших будущих образов (см. vagrantfile)
 Теперь можно запустить новый образ. 
+
   vagrant up
 
 При первом запуске, будет создан базовый образ машины, который необходим для дальнейших разворачиваний. 
@@ -174,15 +176,19 @@ drwxr-xr-x 4 root root 4096 апр 16 12:11 windows
   apt edit-sources
 
 Добавим строку:
+
   deb http://deb.debian.org/debian bookworm-backports main contrib non-free
 
 Ищем пакеты ядра:
+
   apt search linux-image
 
 Устанавливаем самое последнее ядро из репозитария bpo:
+
   apt install linux-image-6.7.12+bpo-amd64-unsigned
 
 Перезагружаемся:
+
   reboot
 
 Версия ядра после обновления - рис. 20240422-03.png
