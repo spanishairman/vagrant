@@ -34,8 +34,8 @@ useradd -m -s /bin/bash -G sudo vagrant
 (предварительно, во время установки ОС отметим пункт SSH-сервер) и загрузим и зарегистрируем 
 стандартный ключ ssh vagrant для доступа без пароля: 
 
-vagrant@debian12:~$ wget https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub
-vagrant@debian12:~$ ssh-copy-id -f -i vagrant.pub vagrant@localhost
+wget https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub
+ssh-copy-id -f -i vagrant.pub vagrant@localhost
 
 Ранее мы создали каталог в файловой системе, который будет использоваться как хранилище образов виртуальных машин (рис. 20240422-01.png)
 В этом хранилище уже находится образ диска новой виртуальной машины. Подготовим сценарий конвертации образов виртуальных машин qcow2 в контейнеры vagrant. Оригинал сценария доступен по ссылке
@@ -155,14 +155,12 @@ drwxr-xr-x 2 root root 4096 апр 16 12:11 ubuntu
 
 drwxr-xr-x 4 root root 4096 апр 16 12:11 windows
 
-max@localhost:~/vagrant/vg3>
-
 Создадим новый файл Vagrantfile, указав имя файла с образом vagrant: 
-max@localhost:~/vagrant/vg3> vagrant init /home/max/vagrant/images/debian12
+  vagrant init /home/max/vagrant/images/debian12
 
 После этого добавим оперативной памяти и виртуальных процессоров для наших будущих образов (см. vagrantfile)
 Теперь можно запустить новый образ. 
-max@localhost:~/vagrant/vg3> vagrant up
+  vagrant up
 
 При первом запуске, будет создан базовый образ машины, который необходим для дальнейших разворачиваний. 
 Последующие запуски vagrant-образов будут использовать этот созданный базовый образ, в связи с чем их запуск юудет происходить гораздо быстрее.
@@ -173,18 +171,18 @@ max@localhost:~/vagrant/vg3> vagrant up
 
 После входа в консоль новой машины, поднимем привилегии и пропишем новый репозиторий:
 
-root@debian12:~# apt edit-sources
+  apt edit-sources
 
 Добавим строку:
-deb http://deb.debian.org/debian bookworm-backports main contrib non-free
+  deb http://deb.debian.org/debian bookworm-backports main contrib non-free
 
 Ищем пакеты ядра:
-root@debian12:~# apt search linux-image
+  apt search linux-image
 
 Устанавливаем самое последнее ядро из репозитария bpo:
-root@debian12:~# apt install linux-image-6.7.12+bpo-amd64-unsigned
+  apt install linux-image-6.7.12+bpo-amd64-unsigned
 
 Перезагружаемся:
-root@debian12:~# reboot
+  reboot
 
 Версия ядра после обновления - рис. 20240422-03.png
