@@ -72,7 +72,9 @@ localhost:~ # rpm -ql vagrant | egrep 'plugins/guests$'
 /usr/share/vagrant/gems/gems/vagrant-2.2.18/plugins/guests
 
 ls -l /usr/share/vagrant/gems/gems/vagrant-2.2.18/plugins/guests
+
 итого 160
+
 drwxr-xr-x 3 root root 4096 апр 16 12:11 alpine
 
 drwxr-xr-x 3 root root 4096 апр 16 12:11 alt
