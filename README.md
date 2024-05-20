@@ -71,49 +71,49 @@ config.vm.synced_folder ".", "/vagrant", disabled: true
 localhost:~ # rpm -ql vagrant | egrep 'plugins/guests$'
 /usr/share/vagrant/gems/gems/vagrant-2.2.18/plugins/guests
 
-'max@localhost:~/vagrant/vg3> ls -l /usr/share/vagrant/gems/gems/vagrant-2.2.18/plugins/guests
+max@localhost:~/vagrant/vg3> ls -l /usr/share/vagrant/gems/gems/vagrant-2.2.18/plugins/guests
 итого 160
-drwxr-xr-x 3 root root 4096 апр 16 12:11 alpine
-drwxr-xr-x 3 root root 4096 апр 16 12:11 alt
-drwxr-xr-x 3 root root 4096 апр 16 12:11 amazon
-drwxr-xr-x 3 root root 4096 апр 16 12:11 arch
-drwxr-xr-x 3 root root 4096 мая 13  2020 astra
-drwxr-xr-x 3 root root 4096 апр 16 12:11 atomic
-drwxr-xr-x 3 root root 4096 апр 16 12:11 bsd
-drwxr-xr-x 3 root root 4096 апр 16 12:11 centos
-drwxr-xr-x 3 root root 4096 апр 16 12:11 coreos
-drwxr-xr-x 3 root root 4096 апр 16 12:11 darwin
-drwxr-xr-x 3 root root 4096 апр 16 12:11 debian
-drwxr-xr-x 2 root root 4096 апр 16 12:11 dragonflybsd
-drwxr-xr-x 2 root root 4096 апр 16 12:11 elementary
-drwxr-xr-x 3 root root 4096 апр 16 12:11 esxi
-drwxr-xr-x 3 root root 4096 апр 16 12:11 fedora
-drwxr-xr-x 3 root root 4096 апр 16 12:11 freebsd
-drwxr-xr-x 3 root root 4096 апр 16 12:11 funtoo
-drwxr-xr-x 3 root root 4096 апр 16 12:11 gentoo
-drwxr-xr-x 3 root root 4096 апр 16 12:11 haiku
-drwxr-xr-x 2 root root 4096 апр 16 12:11 kali
-drwxr-xr-x 3 root root 4096 апр 16 12:11 linux
-drwxr-xr-x 2 root root 4096 апр 16 12:11 mint
-drwxr-xr-x 3 root root 4096 апр 16 12:11 netbsd
-drwxr-xr-x 3 root root 4096 апр 16 12:11 nixos
-drwxr-xr-x 3 root root 4096 апр 16 12:11 omnios
-drwxr-xr-x 3 root root 4096 апр 16 12:11 openbsd
-drwxr-xr-x 3 root root 4096 апр 16 12:11 openwrt
-drwxr-xr-x 3 root root 4096 апр 16 12:11 photon
-drwxr-xr-x 3 root root 4096 апр 16 12:11 pld
-drwxr-xr-x 3 root root 4096 апр 16 12:11 redhat
-drwxr-xr-x 3 root root 4096 апр 16 12:11 rocky
-drwxr-xr-x 3 root root 4096 апр 16 12:11 slackware
-drwxr-xr-x 3 root root 4096 апр 16 12:11 smartos
-drwxr-xr-x 3 root root 4096 апр 16 12:11 solaris
-drwxr-xr-x 3 root root 4096 апр 16 12:11 solaris11
-drwxr-xr-x 3 root root 4096 апр 16 12:11 suse
-drwxr-xr-x 3 root root 4096 апр 16 12:11 tinycore
-drwxr-xr-x 2 root root 4096 апр 16 12:11 trisquel
-drwxr-xr-x 2 root root 4096 апр 16 12:11 ubuntu
-drwxr-xr-x 4 root root 4096 апр 16 12:11 windows
-max@localhost:~/vagrant/vg3>'
+rwxr-xr-x 3 root root 4096 апр 16 12:11 alpine
+rwxr-xr-x 3 root root 4096 апр 16 12:11 alt
+rwxr-xr-x 3 root root 4096 апр 16 12:11 amazon
+rwxr-xr-x 3 root root 4096 апр 16 12:11 arch
+rwxr-xr-x 3 root root 4096 мая 13  2020 astra
+rwxr-xr-x 3 root root 4096 апр 16 12:11 atomic
+rwxr-xr-x 3 root root 4096 апр 16 12:11 bsd
+rwxr-xr-x 3 root root 4096 апр 16 12:11 centos
+rwxr-xr-x 3 root root 4096 апр 16 12:11 coreos
+rwxr-xr-x 3 root root 4096 апр 16 12:11 darwin
+rwxr-xr-x 3 root root 4096 апр 16 12:11 debian
+rwxr-xr-x 2 root root 4096 апр 16 12:11 dragonflybsd
+rwxr-xr-x 2 root root 4096 апр 16 12:11 elementary
+rwxr-xr-x 3 root root 4096 апр 16 12:11 esxi
+rwxr-xr-x 3 root root 4096 апр 16 12:11 fedora
+rwxr-xr-x 3 root root 4096 апр 16 12:11 freebsd
+rwxr-xr-x 3 root root 4096 апр 16 12:11 funtoo
+rwxr-xr-x 3 root root 4096 апр 16 12:11 gentoo
+rwxr-xr-x 3 root root 4096 апр 16 12:11 haiku
+rwxr-xr-x 2 root root 4096 апр 16 12:11 kali
+rwxr-xr-x 3 root root 4096 апр 16 12:11 linux
+rwxr-xr-x 2 root root 4096 апр 16 12:11 mint
+rwxr-xr-x 3 root root 4096 апр 16 12:11 netbsd
+rwxr-xr-x 3 root root 4096 апр 16 12:11 nixos
+rwxr-xr-x 3 root root 4096 апр 16 12:11 omnios
+rwxr-xr-x 3 root root 4096 апр 16 12:11 openbsd
+rwxr-xr-x 3 root root 4096 апр 16 12:11 openwrt
+rwxr-xr-x 3 root root 4096 апр 16 12:11 photon
+rwxr-xr-x 3 root root 4096 апр 16 12:11 pld
+rwxr-xr-x 3 root root 4096 апр 16 12:11 redhat
+rwxr-xr-x 3 root root 4096 апр 16 12:11 rocky
+rwxr-xr-x 3 root root 4096 апр 16 12:11 slackware
+rwxr-xr-x 3 root root 4096 апр 16 12:11 smartos
+rwxr-xr-x 3 root root 4096 апр 16 12:11 solaris
+rwxr-xr-x 3 root root 4096 апр 16 12:11 solaris11
+rwxr-xr-x 3 root root 4096 апр 16 12:11 suse
+rwxr-xr-x 3 root root 4096 апр 16 12:11 tinycore
+rwxr-xr-x 2 root root 4096 апр 16 12:11 trisquel
+rwxr-xr-x 2 root root 4096 апр 16 12:11 ubuntu
+rwxr-xr-x 4 root root 4096 апр 16 12:11 windows
+max@localhost:~/vagrant/vg3>
 
 Создадим новый файл Vagrantfile, указав имя файла с образом vagrant: 
 max@localhost:~/vagrant/vg3> vagrant init /home/max/vagrant/images/debian12
