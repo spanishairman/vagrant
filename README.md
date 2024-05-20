@@ -1,9 +1,10 @@
 Создание Vagrant-образа виртуальной машины, работающей под управлением Debian Linux 12 - Bookworm.
 Обновление ядра операционной системы.
+---
 Используется гипервизор Qemu-KVM, библиотека Libvirt. В качестве хостовой системы - OpenSuse Leap 15.5.
 Для работы Vagrant с Libvirt установлен пакет vagrant-libvirt:
 Сведения — пакет vagrant-libvirt:
----------------------------------
+
 Репозиторий            : Основной репозиторий
 Имя                    : vagrant-libvirt
 Версия                 : 0.10.2-bp155.1.19
@@ -16,9 +17,11 @@
 Адрес источника        : https://github.com/vagrant-libvirt/vagrant-libvirt
 Заключение             : Провайдер Vagrant для libvirt
 Описание               : 
-    This is a Vagrant plugin that adds a Libvirt provider to Vagrant, allowing
-    Vagrant to control and provision machines via the Libvirt toolkit.
-    
+
+This is a Vagrant plugin that adds a Libvirt provider to Vagrant, allowing
+
+Vagrant to control and provision machines via the Libvirt toolkit.
+
 Образ операционной системы создал заранее, для этого установил Debian Linux из официального образа netinst https://www.debian.org/distrib/netinst
 При установке заведём нового пользователя с именем vagrant. 
 Если при установке операционной системы не был создан пользователь vagrant, то создадим его с помощью команды:
@@ -27,7 +30,6 @@ useradd -m -s /bin/bash -G sudo vagrant
     -m - создать домашний каталог;
     -s /bin/bash - задать командную оболочку;
     -G sudo - включить пользователя в группу sudo, что позволит ему выполнять команды с sudo;
-    
 После установки и запуска операционной системы, залогинимся под учетной записью пользователя vagrant 
 (предварительно, во время установки ОС отметим пункт SSH-сервер) и загрузим и зарегистрируем 
 стандартный ключ ssh vagrant для доступа без пароля: 
@@ -69,7 +71,7 @@ config.vm.synced_folder ".", "/vagrant", disabled: true
 localhost:~ # rpm -ql vagrant | egrep 'plugins/guests$'
 /usr/share/vagrant/gems/gems/vagrant-2.2.18/plugins/guests
 
-max@localhost:~/vagrant/vg3> ls -l /usr/share/vagrant/gems/gems/vagrant-2.2.18/plugins/guests
+'max@localhost:~/vagrant/vg3> ls -l /usr/share/vagrant/gems/gems/vagrant-2.2.18/plugins/guests
 итого 160
 drwxr-xr-x 3 root root 4096 апр 16 12:11 alpine
 drwxr-xr-x 3 root root 4096 апр 16 12:11 alt
@@ -111,7 +113,7 @@ drwxr-xr-x 3 root root 4096 апр 16 12:11 tinycore
 drwxr-xr-x 2 root root 4096 апр 16 12:11 trisquel
 drwxr-xr-x 2 root root 4096 апр 16 12:11 ubuntu
 drwxr-xr-x 4 root root 4096 апр 16 12:11 windows
-max@localhost:~/vagrant/vg3>
+max@localhost:~/vagrant/vg3>'
 
 Создадим новый файл Vagrantfile, указав имя файла с образом vagrant: 
 max@localhost:~/vagrant/vg3> vagrant init /home/max/vagrant/images/debian12
