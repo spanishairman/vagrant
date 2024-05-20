@@ -21,10 +21,12 @@
     This is a Vagrant plugin that adds a Libvirt provider to Vagrant, allowing
     Vagrant to control and provision machines via the Libvirt toolkit.
 ```
-Образ операционной системы создём заранее, для этого установим [Debian Linux из официального образа netinst] (https://www.debian.org/distrib/netinst)
+Образ операционной системы создём заранее, для этого установим [Debian Linux из официального образа netinst](https://www.debian.org/distrib/netinst)
 При установке заведём нового пользователя с именем vagrant. 
 Если при установке операционной системы не был создан пользователь vagrant, то создадим его с помощью команды:
+```
 useradd -m -s /bin/bash -G sudo vagrant
+```
  Где:
 ```
 -m - создать домашний каталог;
@@ -39,10 +41,10 @@ vagrant@debian12:~$ wget https://raw.githubusercontent.com/hashicorp/vagrant/mas
 vagrant@debian12:~$ ssh-copy-id -f -i vagrant.pub vagrant@localhost
 ```
 Ранее мы создали каталог в файловой системе, который будет использоваться как хранилище образов виртуальных машин: 
-(20240422-01.png)
+![Хранилище образов виртуальных машин](20240422-01.png)
 В этом хранилище уже находится образ диска новой виртуальной машины. Подготовим сценарий конвертации образов виртуальных машин qcow2 в контейнеры vagrant. 
-Оригинал сценария доступен по [ссылке] (https://raw.githubusercontent.com/vagrant-libvirt/vagrant-libvirt/master/tools/create_box.sh)
-оригинальное описание применения сценария доступно по [ссылке] (https://github.com/vagrant-libvirt/vagrant-libvirt)
+Оригинал сценария доступен по [ссылке](https://raw.githubusercontent.com/vagrant-libvirt/vagrant-libvirt/master/tools/create_box.sh)
+оригинальное описание применения сценария доступно по [ссылке](https://github.com/vagrant-libvirt/vagrant-libvirt)
 
 Необходимо сохранить сценарий в файле именем create-box.sh в рабочем каталоге и сделать исполняемым:
 ```
@@ -51,7 +53,7 @@ chmod u+x create-box.sh
 Каталог для хранения образов вируальных машин по умолчанию в libvirt - /var/lib/libvirt/images/. 
 Как правило в каталоге var, смонтированном обычно в корневой раздел, недостаточно места для разворачивания крупных образов.
 Поэтому ранее мы создали новое хранилище - images:
-(20240422-01.png)
+![хранилище - images](20240422-01.png)
 Изменим в скрипте create-box.sh строку:
 ```
 libvirt.storage_pool_name = "default"
@@ -143,7 +145,7 @@ max@localhost:~/vagrant/vg3> vagrant up
 Установка новой версии ядра с использованием backports.
 
 Версия ядра после установки ОС:
-(20240422-02.png)
+![Версия ядра после установки ОС](20240422-02.png)
 
 После входа в консоль новой машины, поднимем привилегии и пропишем новый репозиторий:
 ```
@@ -166,4 +168,4 @@ root@debian12:~# apt install linux-image-6.7.12+bpo-amd64-unsigned
 root@debian12:~# reboot
 ```
 Версия ядра после обновления:
-(20240422-03.png)
+![Версия ядра после обновления](20240422-03.png)
